@@ -8,24 +8,27 @@
 
 /* ===== BODY ===== */
 body {
-  background: #dcdcdc;
+  background: linear-gradient(120deg, #f0f4f8, #dcdcdc);
   color: #333;
   line-height: 1.6;
 }
 
 /* ===== HEADER ===== */
 header {
-  background: #1e1e50;
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
   color: #fff;
   text-align: center;
-  padding: 40px 20px;
-  border-bottom: 5px solid #00b4d8;
+  padding: 50px 20px;
+  border-bottom: 5px solid #ef476f;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border-radius: 0 0 25px 25px;
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   margin-bottom: 10px;
-  color: #00b4d8;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
 header p {
@@ -34,12 +37,13 @@ header p {
 }
 
 header a {
-  color: #caf0f8;
+  color: #ffd166;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 header a:hover {
-  text-decoration: underline;
+  color: #06d6a0;
 }
 
 /* ===== MAIN CONTENT ===== */
@@ -49,7 +53,7 @@ header a:hover {
   max-width: 1400px;
   margin: 40px auto;
   padding: 0 20px;
-  gap: 25px;
+  gap: 30px;
 }
 
 /* Left and Right Columns */
@@ -70,24 +74,28 @@ header a:hover {
 /* ===== CARDS ===== */
 .card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  border-left: 5px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  border-left: 5px solid #06d6a0;
 }
 
-/* ===== HEADINGS – Professional Colors ===== */
+/* ===== HEADINGS – Gradient Text ===== */
 .card h2 {
-  font-size: 1.5em;
+  font-size: 1.6em;
   margin-bottom: 15px;
   padding-bottom: 8px;
-  color: #006d77;            /* deep teal text */
-  border-bottom: 2px solid #ef476f;  /* coral accent */
+  background: linear-gradient(90deg, #ef476f, #06d6a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid #06d6a0;
 }
 
 /* Lists */
@@ -104,15 +112,16 @@ ul li {
 a {
   color: #0077b6;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #ef476f;
 }
 
 /* ===== SECTION SCROLL MARGIN ===== */
 section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 90px;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -121,16 +130,22 @@ section {
     flex-direction: column;
   }
 
-  .left-col, 
+  .left-col,
   .right-col {
     flex: 100%;
   }
 
   header h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
 
   .card {
     padding: 20px;
+  }
+
+  .card h2 {
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: #006d77;
+    border-bottom: 2px solid #ef476f;
   }
 }
