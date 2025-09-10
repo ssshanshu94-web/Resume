@@ -93,7 +93,7 @@ header a:hover {
   margin-bottom: 15px;
   padding-bottom: 8px;
   background: linear-gradient(90deg, #ef476f, #06d6a0);
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 2px solid #06d6a0;
 }
@@ -144,7 +144,7 @@ section {
   }
 
   .card h2 {
-    /* -webkit-background-clip: initial; */
+    -webkit-background-clip: initial;
     -webkit-text-fill-color: #006d77;
     border-bottom: 2px solid #ef476f;
   }
