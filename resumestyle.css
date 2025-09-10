@@ -1,4 +1,4 @@
-/* Reset */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +6,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Body */
+/* ===== BODY ===== */
 body {
-  background: #f7f9fc;
+  background: #dcdcdc;
   color: #333;
   line-height: 1.6;
 }
@@ -45,7 +45,8 @@ header a:hover {
 /* ===== MAIN CONTENT ===== */
 .content {
   display: flex;
-  max-width: 1100px;
+  width: 100%;
+  max-width: 1400px;
   margin: 40px auto;
   padding: 0 20px;
   gap: 25px;
@@ -53,20 +54,20 @@ header a:hover {
 
 /* Left and Right Columns */
 .left-col {
-  flex: 0 0 40%;
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
 .right-col {
-  flex: 0 0 60%;
+  flex: 2 1 0;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-/* Section Cards */
+/* ===== CARDS ===== */
 .card {
   background: #fff;
   border-radius: 12px;
@@ -80,11 +81,13 @@ header a:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
+/* ===== HEADINGS – Professional Colors ===== */
 .card h2 {
-  color: #0077b6;
+  font-size: 1.5em;
   margin-bottom: 15px;
-  border-bottom: 2px solid #caf0f8;
   padding-bottom: 8px;
+  color: #006d77;            /* deep teal text */
+  border-bottom: 2px solid #ef476f;  /* coral accent */
 }
 
 /* Lists */
@@ -107,7 +110,12 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== Responsive Design ===== */
+/* ===== SECTION SCROLL MARGIN ===== */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 900px) {
   .content {
     flex-direction: column;
@@ -126,4 +134,3 @@ a:hover {
     padding: 20px;
   }
 }
-
